@@ -46,5 +46,21 @@
     "member": "Lucia",
     "customCat": "Corsi",
     "date": "2025-01-12T09:20:00.000Z"
+  },
+  {
+    "id": "ex7",
+    "type": "income",
+    "amount": 1850,
+    "description": "Stipendio gennaio",
+    "source": "Lavoro",
+    "date": "2025-01-01T08:00:00.000Z"
+  },
+  {
+    "id": "ex8",
+    "type": "income",
+    "amount": 320,
+    "description": "Progetto freelance",
+    "source": "Freelance",
+    "date": "2025-01-10T16:00:00.000Z"
   }
 ]
