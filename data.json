@@ -1,0 +1,50 @@
+[
+  {
+    "id": "ex1",
+    "type": "daily",
+    "amount": 4.5,
+    "description": "Caffè + brioche",
+    "category": "Cibo",
+    "date": "2025-01-15T10:30:00.000Z"
+  },
+  {
+    "id": "ex2",
+    "type": "daily",
+    "amount": 22,
+    "description": "Pranzo fuori",
+    "category": "Svago",
+    "date": "2025-01-16T13:15:00.000Z"
+  },
+  {
+    "id": "ex3",
+    "type": "fixed",
+    "amount": 550,
+    "name": "Affitto",
+    "day": 5,
+    "date": "2025-01-01T00:00:00.000Z"
+  },
+  {
+    "id": "ex4",
+    "type": "fixed",
+    "amount": 12.99,
+    "name": "Netflix",
+    "day": 15,
+    "date": "2025-01-01T00:00:00.000Z"
+  },
+  {
+    "id": "ex5",
+    "type": "family",
+    "amount": 85,
+    "member": "Mario",
+    "customCat": "Vestiti",
+    "date": "2025-01-14T18:45:00.000Z"
+  },
+  {
+    "id": "ex6",
+    "type": "family",
+    "amount": 120,
+    "member": "Lucia",
+    "customCat": "Corsi",
+    "date": "2025-01-12T09:20:00.000Z"
+  }
+]

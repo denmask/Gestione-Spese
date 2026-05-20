@@ -1,0 +1,71 @@
+<!-- index.html -->
+<!DOCTYPE html>
+<html lang="it">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
+    <title>Budget Totale - Spese Complete</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="https://cdn.jsdelivr.net/npm/chart.js@4.4.0/dist/chart.umd.min.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/10.8.0/firebase-app-compat.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/10.8.0/firebase-firestore-compat.js"></script>
+</head>
+<body>
+
+<div id="menuOverlay" class="overlay"></div>
+<div id="sideMenu" class="side-menu">
+    <button class="close-btn" id="closeMenu">&times;</button>
+    <h3>Menu</h3>
+    <button id="exportDataBtn">📁 Esporta Backup (JSON)</button>
+    <label for="importFileInput" class="import-label">📂 Importa Backup</label>
+    <input type="file" id="importFileInput" accept=".json" style="display:none">
+    <button id="syncNowBtn">☁️ Sincronizza con Cloud</button>
+    <button id="resetAllBtn" class="danger-btn">🗑️ Reset Completo</button>
+    <button id="loadExampleBtn">📋 Carica Dati Esempio</button>
+</div>
+
+<div class="app-container">
+    <header>
+        <button id="menuBtn" class="menu-icon">☰</button>
+        <h1>💰 Budget Totale</h1>
+        <div class="spacer"></div>
+    </header>
+
+    <div class="select-type">
+        <label for="expenseTypeSelect">📌 Tipo spesa:</label>
+        <select id="expenseTypeSelect">
+            <option value="daily">🍔 Quotidiana</option>
+            <option value="fixed">🏠 Fissa Mensile</option>
+            <option value="family">👨‍👩‍👧 Famiglia</option>
+        </select>
+    </div>
+
+    <div class="dynamic-form" id="dynamicForm">
+        </div>
+
+    <div class="tabs">
+        <button class="tab-btn active" data-tab="daily">🍔 Quotidiane</button>
+        <button class="tab-btn" data-tab="fixed">🏠 Fisse</button>
+        <button class="tab-btn" data-tab="family">👨‍👩‍👧 Famiglia</button>
+    </div>
+
+    <div class="chart-container">
+        <canvas id="statsChart" width="400" height="400"></canvas>
+    </div>
+
+    <div class="list-container" id="listContainer">
+        </div>
+
+    <footer>
+        <div class="footer-stats">
+            <span>💰 Totale Generale: <strong id="totalGeneral">0.00 €</strong></span>
+            <span>📅 Mese: <strong id="totalMonth">0.00 €</strong></span>
+            <span>📊 Transazioni: <strong id="totalCount">0</strong></span>
+        </div>
+    </footer>
+</div>
+
+<script src="firebase-config.js"></script>
+<script src="script.js"></script>
+</body>
+</html>
